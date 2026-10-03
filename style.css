@@ -1,0 +1,482 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #070912;
+    color: white;
+}
+
+
+/* ------------------------------
+   NAVIGATION
+-------------------------------- */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px 7%;
+
+    z-index: 10;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.logo span,
+.footer-logo span {
+    color: #a995ff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #a995ff;
+}
+
+
+/* ------------------------------
+   HERO
+-------------------------------- */
+
+.hero {
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(4, 6, 18, 0.9),
+            rgba(4, 6, 18, 0.3)
+        ),
+        url("space.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 7%;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.small-title {
+    color: #a995ff;
+
+    letter-spacing: 5px;
+    font-size: 13px;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 105px);
+
+    line-height: 0.9;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    color: transparent;
+
+    -webkit-text-stroke: 1px white;
+}
+
+.hero-text {
+    max-width: 500px;
+
+    color: #c5c7d3;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+
+/* Button */
+
+.explore-btn {
+    display: inline-block;
+
+    padding: 16px 28px;
+
+    border: 1px solid rgba(255, 255, 255, 0.6);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    background: white;
+    color: #080a14;
+}
+
+
+/* ------------------------------
+   ABOUT
+-------------------------------- */
+
+.about {
+    padding: 120px 7%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    background: #090b17;
+}
+
+.section-heading > p,
+.fact-label {
+    color: #a995ff;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    font-size: clamp(40px, 5vw, 65px);
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+}
+
+.section-heading h2 span {
+    color: #77798a;
+}
+
+.about-content > p {
+    color: #b7b9c5;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    max-width: 550px;
+
+    margin-bottom: 60px;
+}
+
+
+/* Statistics */
+
+.stats {
+    display: flex;
+
+    gap: 50px;
+
+    border-top: 1px solid #292c3a;
+
+    padding-top: 30px;
+}
+
+.stats h3 {
+    font-size: 30px;
+}
+
+.stats p {
+    color: #77798a;
+
+    font-size: 12px;
+
+    margin-top: 5px;
+}
+
+
+/* ------------------------------
+   PLANETS
+-------------------------------- */
+
+.planets {
+    padding: 120px 7%;
+
+    background: #070912;
+}
+
+.center {
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+
+/* Planet cards */
+
+.planet-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.planet-card {
+    min-height: 470px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    padding: 35px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    background-size: cover;
+    background-position: center;
+
+    transition: 0.5s;
+}
+
+
+/* Card background images */
+
+.earth {
+    background-image:
+        linear-gradient(
+            transparent,
+            rgba(3, 5, 15, 0.95)
+        ),
+        url("earth.jpg");
+}
+
+.mars {
+    background-image:
+        linear-gradient(
+            transparent,
+            rgba(3, 5, 15, 0.95)
+        ),
+        url("mars.jpg");
+}
+
+.saturn {
+    background-image:
+        linear-gradient(
+            transparent,
+            rgba(3, 5, 15, 0.95)
+        ),
+        url("saturn.jpg");
+}
+
+
+/* Hover */
+
+.planet-card:hover {
+    transform: translateY(-12px);
+
+    border-color: #a995ff;
+}
+
+
+/* Number */
+
+.planet-number {
+    position: absolute;
+
+    top: 25px;
+    right: 25px;
+
+    font-size: 12px;
+
+    color: #c4c5ce;
+}
+
+
+/* Planet text */
+
+.planet-info p:first-child {
+    color: #a995ff;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.planet-info h3 {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.planet-info p {
+    color: #d0d1da;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+.planet-info a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+
+/* ------------------------------
+   FACT SECTION
+-------------------------------- */
+
+.facts {
+    padding: 150px 10%;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #1a1738,
+            #070912 65%
+        );
+}
+
+.facts h2 {
+    font-size: clamp(40px, 6vw, 75px);
+
+    line-height: 1.1;
+
+    font-weight: normal;
+
+    margin-bottom: 40px;
+}
+
+.facts h2 span {
+    color: #a995ff;
+}
+
+.fact-text {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #9fa1af;
+
+    line-height: 1.8;
+}
+
+
+/* ------------------------------
+   FOOTER
+-------------------------------- */
+
+footer {
+    padding: 50px 7%;
+
+    background: #04050b;
+
+    text-align: center;
+
+    border-top: 1px solid #1c1e2b;
+}
+
+.footer-logo {
+    font-size: 20px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+footer > p {
+    color: #77798a;
+}
+
+.copyright {
+    font-size: 12px;
+
+    margin-top: 30px;
+}
+
+
+/* ------------------------------
+   RESPONSIVE DESIGN
+-------------------------------- */
+
+@media (max-width: 800px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .planet-container {
+        grid-template-columns: 1fr;
+    }
+
+    .planet-card {
+        min-height: 400px;
+    }
+
+    .stats {
+        gap: 25px;
+    }
+
+}
